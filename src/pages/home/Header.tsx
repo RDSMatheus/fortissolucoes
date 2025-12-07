@@ -6,6 +6,7 @@ import {
   NavbarToggle,
 } from "flowbite-react";
 import logo from "/fortis-logo.svg";
+import { NavLink } from "react-router";
 
 const Header = () => {
   return (
@@ -18,14 +19,17 @@ const Header = () => {
           </NavbarBrand>
           <NavbarToggle />
           <NavbarCollapse>
-            <NavbarLink
-              className="transition-all after:duration-300 hover:text-cyan-400! after:opacity-0 after:h-0.5 after:w-0.5 
+            <NavLink to={"login"}>
+              <NavbarLink
+                as="div"
+                className="transition-all after:duration-300 hover:text-cyan-400! after:opacity-0 after:h-0.5 after:w-0.5 
       after:bg-cyan-400 after:block hover:after:opacity-100
       hover:after:w-full"
-              href="#"
-            >
-              Link
-            </NavbarLink>
+                href="/login"
+              >
+                Login
+              </NavbarLink>
+            </NavLink>
           </NavbarCollapse>
         </Navbar>
       </header>

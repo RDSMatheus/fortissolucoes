@@ -50,7 +50,7 @@ const Benefits = () => {
           const IconComponent = item.icon;
 
           return (
-            <Card className="max-w-sm">
+            <Card className="max-w-sm" key={item.title}>
               <div className="mb-5 bg-blue-500 w-30 h-30 grid place-items-center p-4 rounded-xl ">
                 <IconComponent className="w-20  h-20 text-white mb-4" />
               </div>

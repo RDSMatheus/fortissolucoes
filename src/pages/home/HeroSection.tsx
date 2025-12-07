@@ -1,7 +1,9 @@
+import { useModal } from "../../hooks/useModal";
 import heroSection from "/hero-section.png";
 import { Button } from "flowbite-react";
 
 const HeroSection = () => {
+  const { setOpenModal } = useModal();
   return (
     <div className="container mb-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-30 items-center mb-10">
@@ -18,7 +20,10 @@ const HeroSection = () => {
           <p className="text-xl mb-4 text-gray-700 ">
             Sem cartão. Faça um teste gratuito agora mesmo.
           </p>
-          <Button className="uppercase font-bold text-xl py-8 px-10 shadow-sm bg-linear-to-r/decreasing from-indigo-500 to-teal-400">
+          <Button
+            onClick={() => setOpenModal(true)}
+            className="uppercase font-bold cursor-pointer text-xl py-8 px-10 shadow-sm bg-linear-to-r/decreasing from-indigo-500 to-teal-400"
+          >
             Peça um teste
           </Button>
         </div>
